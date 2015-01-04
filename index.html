@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>
+  <head>
+    <style> .avatar { display: none; } </style>
+    <script src="./force-v1.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width=300 height=300></canvas>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/markolschesky/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/naupintos/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/sainraja/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/_yardenoon/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/bluesix/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/romanbulah/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/aroon_sharma/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/hasslunsford/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/amywebbb/128.jpg" class="avatar"/>
+    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/wegotvices/128.jpg" class="avatar"/>
+    <script>
+      var avatars = [];
+      (function () {
+        var els = document.getElementsByClassName('avatar');
+        for (var i=0, max=els.length; i<max; i++) {  
+          var el = els[i];
+          avatars.push(el);
+        }
+      }());
+      var canvas = document.getElementById('canvas');
+      var force = new Force({ canvas: canvas, avatars: avatars });
+      force.run();
+    </script>
+  </body>
+</html>
